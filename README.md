@@ -28,10 +28,12 @@ bun dev
 
 **Open [http://localhost:3000](http://localhost:3000) with your browser to fill the form of questions.**
 
-**You can find the some statistics at [http://localhost:3000/responses](http://localhost:3000/responses).**
+**You can find some statistics at [http://localhost:3000/responses](http://localhost:3000/responses).**
 
 **You can start editing the form of questions by modifying `app/page.tsx`**
+
 **Also you can edit the statistics platform from `app/responses/page.tsx`.**
+
 **The page auto-updates as you edit the file.**
 
 **This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.**
