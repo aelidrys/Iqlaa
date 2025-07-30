@@ -101,13 +101,13 @@ const Responses: React.FC = () => {
   let totalResponses = `${responses.length}: إجمالي عدد الإجابات `;
 
   return (
-    <div className='bg-gray-800 items-center justify-center mx-auto p-10'>
+    <div className='bg-gray-800 flex flex-col items-center justify-center'>
       <h2 className='mt-10 mb-2 text-4xl font-bold text-center mb-10' style={{color: "cyan"}}>{totalResponses}</h2>
-      <ul className='w-[50%] mx-auto'>
+      <ul className='w-[50%]' style={{ minWidth: 300 }}>
         {_questions.filter(q => q.type === 'multiple_choice').map(q => (
           <li key={q.id} className='mb-5 bg-gray-500 rounded p-3'>
-            <div className='font-bold text-white text-center mb-4' style={{color: "#dbd8d8ff"}}>{q.question}</div>
-            <ul style={{ marginLeft: 20 }}>
+            <div className='font-bold text-white text-center mb-4' style={{color: "#dbd8d8ff"}}>{q.question} pp</div>
+            <ul>
               {q.options && q.options.map(option => {
                 const count = stats[q.id]?.[option] ?? 0;
                 const total: any = Object.values(stats[q.id] || {}).reduce((a, b) => Number(a) + Number(b), 0);
@@ -115,9 +115,9 @@ const Responses: React.FC = () => {
 
                 return (
                   <li key={option} className='mb-1'>
-                    <div className='relative w-full' style={{height: 32, minWidth: 200}}>
+                    <div className='relative w-full'>
                       {/* Default full bar */}
-                      <div className='absolute left-0 top-0 h-full w-full rounded bg-gray-300' style={{zIndex: 0}} />
+                      <div className='absolute h-full w-full rounded bg-gray-300' style={{zIndex: 0}} />
                       {/* Percentage bar */}
                       <div className='absolute left-0 top-0 h-full rounded bg-green-600' style={{width: `${percent}%`, zIndex: 1, transition: 'width 0.5s'}} />
                       {/* Text content */}

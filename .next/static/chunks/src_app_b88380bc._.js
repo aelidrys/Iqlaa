@@ -120,7 +120,7 @@ const Responses = ()=>{
     // clculate totale user responses
     let totalResponses = `${responses.length}: إجمالي عدد الإجابات `;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "bg-gray-800 items-center justify-center mx-auto p-10",
+        className: "bg-gray-800 flex flex-col items-center justify-center",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                 className: "mt-10 mb-2 text-4xl font-bold text-center mb-10",
@@ -134,7 +134,10 @@ const Responses = ()=>{
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                className: "w-[50%] mx-auto",
+                className: "w-[50%]",
+                style: {
+                    minWidth: 300
+                },
                 children: _questions.filter((q)=>q.type === 'multiple_choice').map((q)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                         className: "mb-5 bg-gray-500 rounded p-3",
                         children: [
@@ -143,16 +146,16 @@ const Responses = ()=>{
                                 style: {
                                     color: "#dbd8d8ff"
                                 },
-                                children: q.question
-                            }, void 0, false, {
+                                children: [
+                                    q.question,
+                                    " pp"
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/src/app/responses/page.tsx",
                                 lineNumber: 109,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                style: {
-                                    marginLeft: 20
-                                },
                                 children: q.options && q.options.map((option)=>{
                                     const count = stats[q.id]?.[option] ?? 0;
                                     const total = Object.values(stats[q.id] || {}).reduce((a, b)=>Number(a) + Number(b), 0);
@@ -161,13 +164,9 @@ const Responses = ()=>{
                                         className: "mb-1",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "relative w-full",
-                                            style: {
-                                                height: 32,
-                                                minWidth: 200
-                                            },
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "absolute left-0 top-0 h-full w-full rounded bg-gray-300",
+                                                    className: "absolute h-full w-full rounded bg-gray-300",
                                                     style: {
                                                         zIndex: 0
                                                     }
