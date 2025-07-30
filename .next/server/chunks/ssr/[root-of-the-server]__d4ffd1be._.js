@@ -256,11 +256,8 @@ const Responses = ()=>{
                                 style: {
                                     color: "#dbd8d8ff"
                                 },
-                                children: [
-                                    q.question,
-                                    " pp"
-                                ]
-                            }, void 0, true, {
+                                children: q.question
+                            }, void 0, false, {
                                 fileName: "[project]/src/app/responses/page.tsx",
                                 lineNumber: 109,
                                 columnNumber: 13

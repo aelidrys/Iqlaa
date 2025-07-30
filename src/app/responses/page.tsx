@@ -106,7 +106,7 @@ const Responses: React.FC = () => {
       <ul className='w-[50%]' style={{ minWidth: 300 }}>
         {_questions.filter(q => q.type === 'multiple_choice').map(q => (
           <li key={q.id} className='mb-5 bg-gray-500 rounded p-3'>
-            <div className='font-bold text-white text-center mb-4' style={{color: "#dbd8d8ff"}}>{q.question} pp</div>
+            <div className='font-bold text-white text-center mb-4' style={{color: "#dbd8d8ff"}}>{q.question}</div>
             <ul>
               {q.options && q.options.map(option => {
                 const count = stats[q.id]?.[option] ?? 0;
