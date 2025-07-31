@@ -103,10 +103,10 @@ const Responses: React.FC = () => {
   return (
     <div className='bg-gray-800 flex flex-col items-center justify-center' dir="rtl">
       <h2 className='mt-10 mb-2 text-4xl font-bold text-center mb-10' style={{color: "cyan"}}>{totalResponses}</h2>
-      <ul className='w-[50%]' style={{ minWidth: 300 }}>
+      <ul className='w-[50%] flex flex-col gap-8' style={{ minWidth: 300 }}>
         {_questions.filter(q => q.type === 'multiple_choice').map(q => (
-          <li key={q.id} className='mb-5 bg-gray-700 rounded p-3' style={{}} >
-            <div className='font-bold mb-4' style={{color: "#e7e7e7ff", fontSize: "20px"}}>{q.question}</div>
+          <li key={q.id} className='bg-gray-700 rounded-lg p-3' style={{}} >
+            <div className='font-bold mb-8' style={{color: "#e7e7e7ff", fontSize: "20px"}}>{q.question}</div>
             <ul className=' flex flex-col gap-2'>
               {q.options && [...q.options]
                 .sort((a, b) => (stats[q.id]?.[b] ?? 0) - (stats[q.id]?.[a] ?? 0))
@@ -117,9 +117,9 @@ const Responses: React.FC = () => {
 
                 return (
                   <li key={option} className='mb-1'>
-                    <div className='relative h-full w-full rounded-lg bg-gray-500' style={{zIndex: '0', height: '2.75rem'}} >
-                      <div className='absolute start-0 top-0 h-full rounded-lg bg-green-600'
-                        style={{width: `${percent}%`, zIndex: 1, transition: 'width 0.5s', background: "#416302ff"}} />
+                    <div className='relative h-full w-full rounded-lg bg-green-900' style={{zIndex: '0', height: '2.75rem'}} >
+                      <div className='absolute start-0 top-0 h-full rounded-lg bg-green-700'
+                        style={{width: `${percent}%`, zIndex: 1, transition: 'width 0.5s', background: "#6b6b6b7e"}} />
 
                       <div className='relative z-10 p-4 flex items-center h-full w-full justify-between' style={{color: "white"}}>
                         <span className='font-bold'>{option}</span>
