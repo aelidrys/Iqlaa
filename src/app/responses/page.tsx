@@ -117,10 +117,11 @@ const Responses: React.FC = () => {
 
                 return (
                   <li key={option} className='mb-1'>
-                    <div className='relative h-full w-full rounded bg-gray-500' style={{zIndex: '0', height: '2rem'}} >
-                      <div className='absolute start-0 top-0 h-full rounded bg-green-600' style={{width: `${percent}%`, zIndex: 1, transition: 'width 0.5s'}} />
+                    <div className='relative h-full w-full rounded-lg bg-gray-500' style={{zIndex: '0', height: '2.75rem'}} >
+                      <div className='absolute start-0 top-0 h-full rounded-lg bg-green-600'
+                        style={{width: `${percent}%`, zIndex: 1, transition: 'width 0.5s', background: "#416302ff"}} />
 
-                      <div className='relative z-10 p-2 flex items-center h-full w-full justify-between' style={{color: "white"}}>
+                      <div className='relative z-10 p-4 flex items-center h-full w-full justify-between' style={{color: "white"}}>
                         <span className='font-bold'>{option}</span>
                         <span className="text-gray-50 font-medium">{percent.toFixed(0)}% - {count}</span>
                       </div>
